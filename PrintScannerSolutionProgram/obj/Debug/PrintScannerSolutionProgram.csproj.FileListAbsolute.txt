@@ -1,0 +1,7 @@
+C:\Users\srivatsa.mc\source\repos\PrintScannerSolutionProgram\PrintScannerSolutionProgram\obj\Debug\PrintScannerSolutionProgram.csprojResolveAssemblyReference.cache
+C:\Users\srivatsa.mc\source\repos\PrintScannerSolutionProgram\PrintScannerSolutionProgram\obj\Debug\PrintScannerSolutionProgram.csproj.CoreCompileInputs.cache
+C:\Users\srivatsa.mc\source\repos\PrintScannerSolutionProgram\PrintScannerSolutionProgram\bin\Debug\PrintScannerSolutionProgram.exe.config
+C:\Users\srivatsa.mc\source\repos\PrintScannerSolutionProgram\PrintScannerSolutionProgram\bin\Debug\PrintScannerSolutionProgram.exe
+C:\Users\srivatsa.mc\source\repos\PrintScannerSolutionProgram\PrintScannerSolutionProgram\bin\Debug\PrintScannerSolutionProgram.pdb
+C:\Users\srivatsa.mc\source\repos\PrintScannerSolutionProgram\PrintScannerSolutionProgram\obj\Debug\PrintScannerSolutionProgram.exe
+C:\Users\srivatsa.mc\source\repos\PrintScannerSolutionProgram\PrintScannerSolutionProgram\obj\Debug\PrintScannerSolutionProgram.pdb
