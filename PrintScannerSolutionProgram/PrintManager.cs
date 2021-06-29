@@ -8,10 +8,14 @@ namespace PrintScannerSolutionProgram
 {
     public class PrintManager:Printer
     {
-
+        IPrintingmachine printingMachineValue;
+        public PrintManager(Printer printerParameter)
+        {
+            this.printingMachineValue = printerParameter;
+        }
         public void Print(Printer parameter)
         {
-            parameter.Print();
+            printingMachineValue.Print();
           
         }
 

@@ -8,9 +8,14 @@ namespace PrintScannerSolutionProgram
 {
     public class ScanManager:Scanner
     {
+        IScanmachine scanMachineValue;
+        public ScanManager(Scanner scannerParameter)
+        {
+            this.scanMachineValue = scannerParameter;
+        }
         public void Scan(Scanner parameter)
         {
-            parameter.Scan();
+            scanMachineValue.Scan();
 
         }
 

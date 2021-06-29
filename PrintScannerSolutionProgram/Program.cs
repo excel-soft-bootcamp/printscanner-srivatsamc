@@ -16,19 +16,19 @@ namespace PrintScannerSolutionProgram
             Scanner _scanner = new Scanner();
             _scanner.Scan();
 
-            PrintManager _printManager = new PrintManager();
+            PrintManager _printManager = new PrintManager(new Printer());
             _printManager.Print(_printer);
 
-            ScanManager _scanManager = new ScanManager();
+            ScanManager _scanManager = new ScanManager(new Scanner());
             _scanManager.Scan(_scanner);
 
-            PrintScanner _printOnly = new PrintScanner(new PrintManager());
+            PrintScanner _printOnly = new PrintScanner(new PrintManager(new Printer()));
             _printOnly.PrintingOnly();
 
-            PrintScanner _scanOnly = new PrintScanner(new ScanManager());
+            PrintScanner _scanOnly = new PrintScanner(new ScanManager(new Scanner()));
             _scanOnly.ScanningOnly();
 
-            PrintScanner _printAndScan = new PrintScanner(new PrintManager(), new ScanManager());
+            PrintScanner _printAndScan = new PrintScanner(new PrintManager(new Printer()), new ScanManager(new Scanner()));
             _printAndScan.PrintAndScan();
 
         }
