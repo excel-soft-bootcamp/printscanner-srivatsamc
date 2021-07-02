@@ -22,14 +22,11 @@ namespace PrintScannerSolutionProgram
             ScanManager _scanManager = new ScanManager(new Scanner());
             _scanManager.Scan(_scanner);
 
-            PrintScanner _printOnly = new PrintScanner(new PrintManager(new Printer()));
-            _printOnly.PrintingOnly();
-
-            PrintScanner _scanOnly = new PrintScanner(new ScanManager(new Scanner()));
-            _scanOnly.ScanningOnly();
-
-            PrintScanner _printAndScan = new PrintScanner(new PrintManager(new Printer()), new ScanManager(new Scanner()));
-            _printAndScan.PrintAndScan();
+           PrintScanner _printScanner=new PrintScanner();
+            
+            _printManager.Print(_printScanner);//Print()
+            _scanManager.Scan(_printScanner);//Scan();
+            
 
         }
     }
