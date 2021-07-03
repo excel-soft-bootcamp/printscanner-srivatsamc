@@ -6,18 +6,12 @@ using System.Threading.Tasks;
 
 namespace PrintScannerSolutionProgram
 {
-    public class ScanManager:Scanner
+    public class ScanManager
     {
-        IScanmachine scanMachineValue;
-        public ScanManager(Scanner scannerParameter)
+        public void ScanDocument(IScanner scaner)
         {
-            this.scanMachineValue = scannerParameter;
+            scaner.Scan();
         }
-        public void Scan(Scanner parameter)
-        {
-            scanMachineValue.Scan();
-
-        }
-
     }
+
 }

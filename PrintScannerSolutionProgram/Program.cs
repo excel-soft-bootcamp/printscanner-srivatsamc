@@ -10,23 +10,23 @@ namespace PrintScannerSolutionProgram
     {
         static void Main(string[] args)
         {
-            Printer _printer = new Printer();
-            _printer.Print();
+            Printer _printerRef = new Printer();
+            Scanner _scannerRef = new Scanner();
 
-            Scanner _scanner = new Scanner();
-            _scanner.Scan();
+            PrintManager _printManager = new PrintManager();
+            _printManager.PrintDocument(_printerRef);
 
-            PrintManager _printManager = new PrintManager(new Printer());
-            _printManager.Print(_printer);
+            ScanManager _scanManager = new ScanManager();
+            _scanManager.ScanDocument(_scannerRef);
 
-            ScanManager _scanManager = new ScanManager(new Scanner());
-            _scanManager.Scan(_scanner);
+            PrintScanner _printScanner = new PrintScanner();
+            _printScanner.SetPrinter(_printerRef);
+            _printScanner.SetScanner(_scannerRef);
 
-           PrintScanner _printScanner=new PrintScanner();
-            
-            _printManager.Print(_printScanner);//Print()
-            _scanManager.Scan(_printScanner);//Scan();
-            
+            _printManager.PrintDocument(_printScanner);
+            _scanManager.ScanDocument(_printScanner);
+
+
 
         }
     }

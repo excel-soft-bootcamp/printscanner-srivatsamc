@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace PrintScannerSolutionProgram
 {
-    public class Printer:IPrintingmachine
+    public class Printer : IPrinter
     {
-        public void Print() { Console.WriteLine("Print in Action"); } 
-
+        public void Print() { Console.WriteLine("Print in Action"); }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PrintScannerSolutionProgram
 {
-    public interface IPrintingmachine
+    public interface IPrinter
     {
         void Print();
     }

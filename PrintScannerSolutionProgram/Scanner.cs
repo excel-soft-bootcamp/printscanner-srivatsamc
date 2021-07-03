@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace PrintScannerSolutionProgram
 {
-    public class Scanner:IScanmachine
+    public class Scanner : IScanner
     {
         public void Scan() { Console.WriteLine("Scan In Action"); }
 
     }
+
 }

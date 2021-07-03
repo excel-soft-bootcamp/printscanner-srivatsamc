@@ -6,46 +6,30 @@ using System.Threading.Tasks;
 
 namespace PrintScannerSolutionProgram
 {
-    public class PrintScanner
+    public class PrintScanner : IPrinter, IScanner
     {
-        IPrintingmachine _printingmachine;
-        IScanmachine _scanningmachine;
+        IPrinter _printerRef;
+        IScanner _scannerRef;
 
-        public PrintScanner(Printer _printer)
+        public void SetPrinter(IPrinter printerRef)
         {
-            this._printingmachine = _printer;
+            this._printerRef = printerRef;
+        }
+        public void SetScanner(IScanner scanRef)
+        {
 
+            this._scannerRef = scanRef;
+        }
+        public void Print()
+        {
+            //Delegate Call To Either NanoLaserPrinter or Printer
+            this._printerRef.Print();
+        }
+        public void Scan()
+        {
+            //Delegate Call To Scanner
+            this._scannerRef.Scan();
         }
 
-        public  PrintScanner(Scanner _scanner)
-        {
-            this._scanningmachine = _scanner;
-        }
-
-        public  PrintScanner(Printer _printer, Scanner _scanner)
-        {
-            this._printingmachine = _printer;
-            this._scanningmachine = _scanner;
-        }
-
-        public void PrintingOnly()
-        {
-            _printingmachine.Print();
-        }
-
-        public void ScanningOnly()
-        {
-            _scanningmachine.Scan();
-        }
-
-        public void PrintAndScan()
-        {
-            _printingmachine.Print();
-            _scanningmachine.Scan();
-        }
-
-
-
-        
     }
 }
